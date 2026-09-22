@@ -225,6 +225,28 @@ export default {
 </template>
 
 <style scoped>
+.l-glyph-selection__row {
+  display: grid;
+  grid-template-columns: repeat(4, 10rem);
+  gap: 1rem;
+}
+
+.l-glyph-selection-glyph-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.l-glyph-equip-button {
+  width: 100%;
+  aspect-ratio: 1/1;
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  border: none;
+  background-color: transparent;
+}
+
 .o-warning {
   color: var(--color-infinity);
 }
