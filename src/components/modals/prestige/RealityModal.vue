@@ -157,16 +157,21 @@ export default {
       v-if="!firstReality"
       class="l-glyph-selection__row"
     >
-      <GlyphComponent
-        v-for="(glyph, index) in glyphs"
-        :key="index"
-        :class="glyphClass(index)"
-        :glyph="glyph"
-        :is-in-modal="true"
-        :ignore-modified-level="true"
-        :show-sacrifice="canSacrifice"
-        @click.native="select(index)"
-      />
+      <div
+          class="l-glyph-selection-glyph-wrapper"
+          v-for="(glyph, index) in glyphs"
+          @click="select(index)"
+      >
+        <GlyphComponent
+          :key="index"
+          :class="glyphClass(index)"
+          :glyph="glyph"
+          :is-in-modal="true"
+          :ignore-modified-level="true"
+          :show-sacrifice="canSacrifice"
+        />
+        <button class="l-glyph-equip-button"></button>
+      </div>
     </div>
     <div v-if="!firstReality">
       {{ levelStats }}
