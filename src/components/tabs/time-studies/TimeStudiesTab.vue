@@ -10,6 +10,7 @@ import PrimaryButton from "@/components/PrimaryButton";
 import SecretTimeStudy from "./SecretTimeStudy";
 import TimeStudyConnection from "./TimeStudyConnection";
 import TriadTimeStudy from "./TriadTimeStudy";
+import TimeTheoremShop from "@/components/tabs/time-studies/tt-shop/TimeTheoremShop";
 
 export default {
   name: "TimeStudiesTab",
@@ -22,7 +23,8 @@ export default {
     TriadTimeStudy,
     SecretTimeStudy,
     TimeStudyConnection,
-    HiddenTimeStudyConnection
+    HiddenTimeStudyConnection,
+    TimeTheoremShop
   },
   data() {
     return {
@@ -136,6 +138,9 @@ export default {
 
 <template>
   <div class="l-time-studies-tab">
+    <TimeTheoremShop
+      class="l-time-studies-tab__tt-shop"
+    />
     <div class="c-subtab-option-container">
       <PrimaryButton
         class="o-primary-btn--subtab-option"

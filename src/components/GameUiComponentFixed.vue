@@ -79,10 +79,6 @@ export default {
     <ModernBottomButtons
       v-if="view.newUI && view.theme !== 'S12'"
     />
-    <TimeTheoremShop
-      v-if="view.subtab === 'studies'"
-      class="l-time-studies-tab__tt-shop"
-    />
     <EndgameSkillShop
       v-if="view.subtab === 'masteries'"
       class="l-endgame-masteries-tab__es-shop"
