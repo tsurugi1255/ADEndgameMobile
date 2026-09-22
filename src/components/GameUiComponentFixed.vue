@@ -79,7 +79,6 @@ export default {
     <ModernBottomButtons
       v-if="view.newUI && view.theme !== 'S12'"
     />
-    <HowToPlay :style="hideIfMatoFullscreen" />
     <TimeTheoremShop
       v-if="view.subtab === 'studies'"
       class="l-time-studies-tab__tt-shop"
