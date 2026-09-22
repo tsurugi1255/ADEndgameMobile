@@ -69,14 +69,14 @@ export default {
       class="l-tab-btn-inner"
       @click="tab.show(true)"
     >
-      {{ tabName }}
+      {{ tabName.substring(0,1) }}
       <div
         v-if="hasNotification"
         class="fas fa-circle-exclamation l-notification-icon"
       />
     </div>
     <div
-      v-if="showSubtabs"
+      v-if="showSubtabs && isCurrentTab"
       class="subtabs"
     >
       <template
@@ -92,14 +92,11 @@ export default {
           "
           @click="subtab.show(true)"
         >
-          <span v-html="subtab.symbol" />
+          {{ subtab.name }}
           <div
             v-if="subtab.hasNotification"
             class="fas fa-circle-exclamation l-notification-icon"
           />
-          <div class="o-subtab__tooltip">
-            {{ subtab.name }}
-          </div>
         </div>
       </template>
     </div>
@@ -107,47 +104,9 @@ export default {
 </template>
 
 <style scoped>
-.o-tab-btn::before {
-  content: "";
-  width: 0;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  left: 0;
-  background-color: var(--color-accent);
-  transition: width 0.15s;
-}
-
-.o-tab-btn--active::before {
-  width: 0.5rem;
-}
-
-.o-tab-btn--infinity::before {
-  background-color: var(--color-infinity);
-}
-
-.o-tab-btn--eternity::before {
-  background-color: var(--color-eternity);
-}
-
-.o-tab-btn--reality::before {
-  background-color: var(--color-reality);
-}
-
-.o-tab-btn--celestial::before {
-  background-color: var(--color-celestials);
-}
-
-.o-tab-btn--endgame::before {
-  background-color: var(--color-endgame);
-}
 
 .o-tab-btn--cd-expansion::before {
   background: linear-gradient(var(--color-infinity), var(--color-eternity), var(--color-reality), var(--color-celestials));
-}
-
-.o-tab-btn--divinity::before {
-  background-color: var(--color-pelle--base);
 }
   
 .o-tab-btn--universes::before {
@@ -158,8 +117,12 @@ export default {
   animation: a-universes--transient-glow-hover 10s infinite;
 }
 
-.o-subtab-btn--active {
+.o-tab-btn--active {
   border-bottom-width: 0.5rem;
+}
+
+.o-subtab-btn--active {
+  border-bottom-width: 0.5rem solid var(--color-accent);
 }
 
 .o-tab-btn--subtab:first-child {

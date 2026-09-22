@@ -1,11 +1,9 @@
 <script>
-import ModernSidebarCurrency from "./ModernSidebarCurrency";
 import ModernTabButton from "./ModernTabButton";
 
 export default {
   name: "ModernSidebar",
   components: {
-    ModernSidebarCurrency,
     ModernTabButton
   },
   data() {
@@ -31,7 +29,6 @@ export default {
     v-if="!isHidden"
     class="c-modern-sidebar"
   >
-    <ModernSidebarCurrency />
     <template
       v-for="(tab, tabPosition) in tabs"
     >
