@@ -951,27 +951,10 @@ button:focus {
   text-shadow: 0 0 0.3rem;
 }
 
-.o-tab-btn:hover {
-  color: var(--color-prestige--accent);
-  background: var(--color-accent);
-}
-
-.o-tab-btn--modern-tabs:last-child {
-  border-bottom-right-radius: var(--var-border-radius, 0.5rem);
-}
-
-.o-tab-btn--modern-tabs:last-child:hover {
-  border-bottom-right-radius: 0;
-}
-
 .o-tab-btn--infinity {
   color: var(--color-infinity);
   background-color: var(--color-prestige--accent);
   border-color: var(--color-infinity);
-}
-
-.o-tab-btn--infinity:hover {
-  background: var(--color-infinity);
 }
 
 .o-tab-btn--eternity {
@@ -980,18 +963,10 @@ button:focus {
   border-color: var(--color-eternity);
 }
 
-.o-tab-btn--eternity:hover {
-  background: var(--color-eternity);
-}
-
 .o-tab-btn--reality {
   color: var(--color-reality);
   background-color: var(--color-prestige--accent);
   border-color: var(--color-reality);
-}
-
-.o-tab-btn--reality:hover {
-  background: var(--color-reality);
 }
 
 .o-tab-btn--celestial {
@@ -1000,18 +975,10 @@ button:focus {
   border-color: var(--color-celestials);
 }
 
-.o-tab-btn--celestial:hover {
-  background: var(--color-celestials);
-}
-
 .o-tab-btn--endgame {
   color: var(--color-endgame);
   background-color: var(--color-prestige--accent);
   border-color: var(--color-endgame);
-}
-
-.o-tab-btn--endgame:hover {
-  background: var(--color-endgame);
 }
 
 .o-tab-btn--cd-expansion {
@@ -1020,18 +987,10 @@ button:focus {
   border-color: var(--color-alpha--base);
 }
 
-.o-tab-btn--cd-expansion:hover {
-  background: linear-gradient(var(--color-infinity), var(--color-eternity), var(--color-reality), var(--color-celestials));
-}
-
 .o-tab-btn--divinity {
   color: var(--color-pelle--base);
   background-color: var(--color-prestige--accent);
   border-color: var(--color-pelle--base);
-}
-
-.o-tab-btn--divinity:hover {
-  background: var(--color-pelle--base);
 }
 
 .o-tab-btn--universes {
@@ -1039,17 +998,9 @@ button:focus {
   animation: a-universes-glow-primary 10s infinite;
 }
 
-.o-tab-btn--universes:hover {
-  animation: a-universes-glow-hover 10s infinite;
-}
-
 .o-tab-btn--universes__transient {
   background-color: var(--color-prestige--accent);
   animation: a-universes--transient-glow-primary 10s infinite;
-}
-
-.o-tab-btn--universes__transient:hover {
-  animation: a-universes--transient-glow-hover 10s infinite;
 }
 
 @keyframes a-universes-glow-primary {
