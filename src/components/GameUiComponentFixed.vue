@@ -15,6 +15,7 @@ import ScreenOverlay from "@/components/ui-modes/ScreenOverlay";
 import SpectateGame from "@/components/SpectateGame";
 import SpeedrunStatus from "@/components/SpeedrunStatus";
 import TimeTheoremShop from "@/components/tabs/time-studies/tt-shop/TimeTheoremShop";
+import ModernBottomButtons from "./ui-modes/modern/ModernBottomButtons";
 
 export default {
   name: "GameUiComponentFixed",
@@ -34,7 +35,8 @@ export default {
     Prologue,
     CreditsContainer,
     SpectateGame,
-    NewGame
+    NewGame,
+    ModernBottomButtons
   },
   data() {
     return {
@@ -73,6 +75,9 @@ export default {
     <div
       id="notification-container"
       class="l-notification-container"
+    />
+    <ModernBottomButtons
+      v-if="view.newUI && view.theme !== 'S12'"
     />
     <HowToPlay :style="hideIfMatoFullscreen" />
     <TimeTheoremShop
