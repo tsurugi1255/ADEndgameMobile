@@ -481,9 +481,7 @@ button:focus {
 .time-theorem-buttons {
   display: flex;
   width: 55.5rem;
-  position: absolute;
-  bottom: 0;
-  z-index: 2;
+  position: relative;
   align-items: flex-end;
   font-family: Typewriter, serif;
   color: var(--color-text);
